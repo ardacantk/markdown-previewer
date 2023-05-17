@@ -1,3 +1,6 @@
+![hw1](https://github.com/ardacantk/markdown-previewer/assets/95983921/27691dab-ac62-487d-bc99-f50f9a4b2d8a)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
