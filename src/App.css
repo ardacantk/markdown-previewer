@@ -1,38 +1,109 @@
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btnDiv {
+  position: absolute;
+  top: 1%;
+  right: 0;
+  margin-right: 170px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* -------------------------
+        6. TEXT PANELS
+------------------------- */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-panels {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 10%;
+  height: 600px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 1024px) {
+  .text-panels {
+    width: 90%;
+    margin: 0 5%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .text-panels {
+    flex-grow: 2;
+    width: 100%;
+    margin: 0;
   }
 }
+
+.text-panel-left,
+.text-panel-right {
+  width: 45%;
+  height: 100%;
+  padding: 10px;
+  box-shadow: 10px 10px lighten(#4A4A4A, 10%);
+  background-color:  #FFDD67;
+}
+
+.text-panel-left {
+  resize: none;
+  outline: none;
+  overflow-x: hidden;
+  font-family: 'Space Mono', monospace;
+  font-size: .95em;
+  color: #4A4A4A;
+  border: 0;
+  .non-editable {
+    pointer-events: none;
+  }
+}
+
+.text-panel-right {
+  text-align: start;
+  font-size: .95em;
+  overflow: auto;
+}
+
+@media (max-width: 1024px) {
+  .text-panel-left,
+  .text-panel-right {
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-panel-left,
+  .text-panel-right {
+    font-size: .65em;
+  }
+}
+
+.text-panel-left::-webkit-scrollbar,
+.text-panel-right::-webkit-scrollbar {
+  width: 10px;
+}
+
+.text-panel-left::-webkit-scrollbar-track,
+.text-panel-right::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.text-panel-left::-webkit-scrollbar-thumb,
+.text-panel-right::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  .text-panel-left,
+  .text-panel-right {
+    width: 50%;
+    box-shadow: none;
+  }
+  .text-panel-left {
+    border-right: 3px solid #FFCD38;
+  }
+}
+
